@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { uiText } from '@/config/uiText';
 import styles from './RewardCard.module.css';
 
 interface RewardCardProps {
@@ -49,15 +50,15 @@ export default function RewardCard({ code, onPlayAgain, showBackLink = false }: 
 
       <div className={styles.rewardCard}>
         <div className={styles.celebrationIcon}>🎉</div>
-        <h2 className={styles.congratsTitle}>Congratulations!</h2>
+        <h2 className={styles.congratsTitle}>{uiText.games.reward.title}</h2>
         <p className={styles.congratsSubtitle}>
-          You completed the challenge! Here&apos;s your reward:
+          {uiText.games.reward.subtitle}
         </p>
 
         {/* Code reveal box */}
         <div className={`${styles.codeBox} ${revealed ? styles.codeRevealed : ''}`}>
           <div className={styles.codeOverlay}>
-            <span>✨ Tap to reveal ✨</span>
+            <span>{uiText.games.reward.tapToReveal}</span>
           </div>
           <div className={styles.codeDigits}>
             {code.split('').map((digit, i) => (
@@ -76,18 +77,18 @@ export default function RewardCard({ code, onPlayAgain, showBackLink = false }: 
         <div className={styles.hintBox}>
           <span className={styles.hintIcon}>🔑</span>
           <p className={styles.hintText}>
-            Collect 4 more digits to claim the final prize!
+            {uiText.games.reward.hint}
           </p>
         </div>
 
         {/* Action buttons */}
         <div className={styles.actions}>
           <button className="btn-primary" onClick={onPlayAgain}>
-            🎮 Play Again
+            {uiText.games.reward.playAgain}
           </button>
           {showBackLink && (
             <Link href="/" className={styles.backLink}>
-              ← Back to Home
+              {uiText.games.reward.backToHome}
             </Link>
           )}
         </div>

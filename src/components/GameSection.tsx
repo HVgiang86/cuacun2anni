@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import { uiText } from '@/config/uiText';
 import styles from './GameSection.module.css';
 
 interface GameSectionProps {
@@ -42,9 +43,9 @@ export default function GameSection({ onOpenTulipGame }: GameSectionProps) {
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.headerIcon}>🎮</div>
-          <h2 className={styles.title}>Little Games for You</h2>
+          <h2 className={styles.title}>{uiText.games.sectionTitle}</h2>
           <p className={styles.subtitle}>
-            Play these mini-games to collect secret codes and unlock a special surprise!
+            {uiText.games.subtitle}
           </p>
         </div>
 
@@ -54,20 +55,19 @@ export default function GameSection({ onOpenTulipGame }: GameSectionProps) {
             <div className={styles.cardGlow}></div>
             <div className={styles.cardContent}>
               <div className={styles.gameEmoji}>🌷</div>
-              <h3 className={styles.gameName}>Tulip Catch</h3>
+              <h3 className={styles.gameName}>{uiText.games.tulipGame.title}</h3>
               <p className={styles.gameDescription}>
-                Catch falling tulips before they disappear! 
-                Collect 10 tulips to earn your first secret code.
+                {uiText.games.tulipGame.description}
               </p>
               <div className={styles.gameDifficulty}>
-                <span className={styles.difficultyLabel}>Difficulty:</span>
+                <span className={styles.difficultyLabel}>{uiText.games.difficultyLabel}</span>
                 <span className={styles.difficultyStars}>⭐⭐</span>
               </div>
               <button 
                 className={`btn-primary ${styles.playButton}`}
                 onClick={onOpenTulipGame}
               >
-                🌷 Play Now
+                {uiText.games.tulipGame.playButton}
               </button>
             </div>
           </div>
@@ -77,17 +77,16 @@ export default function GameSection({ onOpenTulipGame }: GameSectionProps) {
             <div className={styles.cardGlow}></div>
             <div className={styles.cardContent}>
               <div className={styles.gameEmoji}>🃏</div>
-              <h3 className={styles.gameName}>Image Pairing</h3>
+              <h3 className={styles.gameName}>{uiText.games.pairingGame.title}</h3>
               <p className={styles.gameDescription}>
-                Match all the photo pairs arranged in a heart shape! 
-                Find every match to reveal your second secret code.
+                {uiText.games.pairingGame.description}
               </p>
               <div className={styles.gameDifficulty}>
-                <span className={styles.difficultyLabel}>Difficulty:</span>
+                <span className={styles.difficultyLabel}>{uiText.games.difficultyLabel}</span>
                 <span className={styles.difficultyStars}>⭐⭐⭐</span>
               </div>
               <Link href="/image-game" className={`btn-primary ${styles.playButton}`}>
-                🃏 Play Now
+                {uiText.games.pairingGame.playButton}
               </Link>
             </div>
           </div>
@@ -96,7 +95,7 @@ export default function GameSection({ onOpenTulipGame }: GameSectionProps) {
         {/* Collection progress hint */}
         <div className={`${styles.progressHint} ${visible ? styles.visible : ''}`}>
           <span>🔑</span>
-          <span>Collect codes from both games to unlock the ultimate prize!</span>
+          <span>{uiText.games.progressHint}</span>
           <span>🎁</span>
         </div>
       </div>

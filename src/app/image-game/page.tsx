@@ -7,6 +7,7 @@ import PhotoPairGame from "@/components/PhotoPairGame";
 import RewardCard from "@/components/RewardCard";
 import OrientationGuard from "@/components/OrientationGuard";
 import { rewardCodes } from "@/config/rewardCodes";
+import { uiText } from "@/config/uiText";
 
 const ANIM_DURATION = 2;
 
@@ -36,7 +37,7 @@ export default function ImageGamePage() {
           href="/"
           className="fixed top-4 left-4 z-50 px-4 py-2 text-sm font-semibold text-white bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300"
         >
-          ← Home
+          {uiText.games.pairingGame.backToHome}
         </Link>
 
         {!showReward ? (
@@ -51,9 +52,9 @@ export default function ImageGamePage() {
             {/* Footer text */}
             <div className="mt-4 flex justify-between w-full px-4 absolute bottom-4 left-0 right-0">
               <p className="text-white/30 text-sm">
-                Match the photo pairs to reveal the surprise
+                {uiText.games.pairingGame.hint}
               </p>
-              <p className="text-white/30 text-sm">🌷 Happy Anniversary 🌷</p>
+              <p className="text-white/30 text-sm">{uiText.games.pairingGame.footer}</p>
             </div>
           </motion.div>
         ) : (

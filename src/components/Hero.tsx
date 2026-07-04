@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import loveConfig from '@/config/loveConfig';
+import { uiText } from '@/config/uiText';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -55,9 +56,9 @@ export default function Hero() {
       <button 
         className={styles.scrollHint}
         onClick={scrollToContent}
-        aria-label="Scroll to begin"
+        aria-label={uiText.hero.scrollPrompt}
       >
-        <span>Scroll to begin</span>
+        <span>{uiText.hero.scrollPrompt}</span>
         <svg className={styles.chevron} width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

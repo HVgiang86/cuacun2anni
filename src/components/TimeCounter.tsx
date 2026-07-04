@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import loveConfig from '@/config/loveConfig';
+import { uiText } from '@/config/uiText';
 import styles from './TimeCounter.module.css';
 
 interface TimeLeft {
@@ -52,21 +53,21 @@ export default function TimeCounter() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.icon}>⏰</div>
-          <h2 className={styles.title}>Time We've Shared</h2>
+          <h2 className={styles.title}>{uiText.timeCounter.title}</h2>
           <p className={styles.subtitle}>
-            Every day with you is a treasure
+            {uiText.timeCounter.subtitle}
           </p>
 
           <div className={styles.counterGrid}>
             <div className={styles.timeBox}>
               <div className={styles.timeValue}>{timeLeft.days}</div>
-              <div className={styles.timeLabel}>Days</div>
+              <div className={styles.timeLabel}>{uiText.timeCounter.daysLabel}</div>
               <div className={styles.timeIcon}>📅</div>
             </div>
           </div>
 
           <p className={styles.message}>
-            ...and counting! Here's to infinity more moments together💕
+            {uiText.timeCounter.message}
           </p>
         </div>
       </div>

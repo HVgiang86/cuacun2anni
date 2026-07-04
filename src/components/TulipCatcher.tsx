@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import RewardCard from './RewardCard';
 import { rewardCodes } from '@/config/rewardCodes';
+import { uiText } from '@/config/uiText';
 import styles from './TulipCatcher.module.css';
 
 interface Tulip {
@@ -137,7 +138,7 @@ export default function TulipCatcher({ isOpen, onClose }: TulipCatcherProps) {
         <button
           className={styles.closeButton}
           onClick={onClose}
-          aria-label="Close game"
+          aria-label={uiText.games.tulipCatcher.ariaClose}
         >
           ✕
         </button>
@@ -150,22 +151,22 @@ export default function TulipCatcher({ isOpen, onClose }: TulipCatcherProps) {
         ) : (
           <div className={styles.gameWrapper}>
             <div className={styles.gameHeader}>
-              <h2>Tulip Catch 🌷</h2>
-              <p>Catch {TARGET_SCORE} falling tulips to earn your secret code!</p>
+              <h2>{uiText.games.tulipCatcher.title}</h2>
+              <p>{uiText.games.tulipCatcher.subtitle(TARGET_SCORE)}</p>
             </div>
 
             {!gameStarted ? (
               <div className={styles.startScreen}>
                 <div className={styles.startCard}>
                   <div className={styles.gameIcon}>🎮</div>
-                  <h3>How to Play</h3>
+                  <h3>{uiText.games.tulipCatcher.howToPlay}</h3>
                   <ul className={styles.instructions}>
-                    <li>🌷 Tap the falling tulips to catch them</li>
-                    <li>🎯 Catch {TARGET_SCORE} tulips to win</li>
-                    <li>⏱️ Don&apos;t let them fall off the screen!</li>
+                    <li>{uiText.games.tulipCatcher.rule1}</li>
+                    <li>{uiText.games.tulipCatcher.rule2(TARGET_SCORE)}</li>
+                    <li>{uiText.games.tulipCatcher.rule3}</li>
                   </ul>
                   <button className="btn-primary" onClick={startGame}>
-                    Start Game
+                    {uiText.games.tulipCatcher.startButton}
                   </button>
                 </div>
               </div>
@@ -173,7 +174,7 @@ export default function TulipCatcher({ isOpen, onClose }: TulipCatcherProps) {
               <>
                 <div className={styles.scoreBoard}>
                   <div className={styles.scoreBadge}>
-                    <span className={styles.scoreLabel}>Score:</span>
+                    <span className={styles.scoreLabel}>{uiText.games.tulipCatcher.scoreLabel}</span>
                     <span className={styles.scoreValue}>{score} / {TARGET_SCORE}</span>
                   </div>
                   <div className={styles.progressBar}>
@@ -195,7 +196,7 @@ export default function TulipCatcher({ isOpen, onClose }: TulipCatcherProps) {
                       }}
                       onClick={(e) => handleTulipClick(tulip.id, e)}
                       onTouchStart={(e) => handleTulipClick(tulip.id, e)}
-                      aria-label="Catch tulip"
+                      aria-label={uiText.games.tulipCatcher.ariaCatch}
                     >
                       🌷
                     </button>
@@ -203,7 +204,7 @@ export default function TulipCatcher({ isOpen, onClose }: TulipCatcherProps) {
                   
                   {tulips.length === 0 && (
                     <div className={styles.waitingMessage}>
-                      Get ready! Tulips are coming... 🌷
+                      {uiText.games.tulipCatcher.waitingMessage}
                     </div>
                   )}
                 </div>

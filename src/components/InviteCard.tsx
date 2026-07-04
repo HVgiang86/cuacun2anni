@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import Image from 'next/image';
 import loveConfig from '@/config/loveConfig';
 import inviteConfig from '@/config/invite.json';
+import { uiText } from '@/config/uiText';
 import { getPath } from '@/utils/basePath';
 import styles from './InviteCard.module.css';
 
@@ -14,7 +15,7 @@ export default function InviteCard() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleYesClick = () => {
-    alert('🎉 Yay! I knew you would say yes... I can\'t wait to celebrate with you!! 💕');
+    alert(uiText.invite.yesAlert);
   };
 
   const handleNoClick = () => {
@@ -93,7 +94,7 @@ SEQUENCE:0
 BEGIN:VALARM
 TRIGGER:-PT2H
 ACTION:DISPLAY
-DESCRIPTION:Reminder: Anniversary Dinner in 2 hours!
+DESCRIPTION:${uiText.invite.calendarReminder}
 END:VALARM
 END:VEVENT
 END:VCALENDAR`;
@@ -140,7 +141,7 @@ END:VCALENDAR`;
           <div className={styles.detailItem}>
             <span className={styles.detailIcon}>📅</span>
             <div>
-              <div className={styles.detailLabel}>Date</div>
+              <div className={styles.detailLabel}>{uiText.invite.labels.date}</div>
               <div className={styles.detailValue}>{inviteConfig.date}</div>
             </div>
           </div>
@@ -148,7 +149,7 @@ END:VCALENDAR`;
           <div className={styles.detailItem}>
             <span className={styles.detailIcon}>🕐</span>
             <div>
-              <div className={styles.detailLabel}>Time</div>
+              <div className={styles.detailLabel}>{uiText.invite.labels.time}</div>
               <div className={styles.detailValue}>{inviteConfig.time}</div>
             </div>
           </div>
@@ -156,7 +157,7 @@ END:VCALENDAR`;
           <div className={styles.detailItem}>
             <span className={styles.detailIcon}>📍</span>
             <div>
-              <div className={styles.detailLabel}>Location</div>
+              <div className={styles.detailLabel}>{uiText.invite.labels.location}</div>
               <div className={styles.detailValue}>{inviteConfig.location}</div>
             </div>
           </div>
@@ -169,7 +170,7 @@ END:VCALENDAR`;
             className={`btn-primary ${styles.yesButton}`}
             onClick={handleYesClick}
           >
-            Yes! I&apos;d Love To! 💕
+            {uiText.invite.buttons.yes}
           </button>
 
           <button 
@@ -184,7 +185,7 @@ END:VCALENDAR`;
             }}
             onClick={handleNoClick}
           >
-            No 😢
+            {uiText.invite.buttons.no}
           </button>
 
           <div className={styles.secondaryActions}>
@@ -192,14 +193,14 @@ END:VCALENDAR`;
               className="btn-secondary"
               onClick={handleAddToCalendar}
             >
-              📅 Add to Calendar
+              {uiText.invite.buttons.calendar}
             </button>
 
             <button 
               className="btn-secondary"
               onClick={handleSendAnswer}
             >
-              💌 Send My Answer
+              {uiText.invite.buttons.sendAnswer}
             </button>
           </div>
         </div>

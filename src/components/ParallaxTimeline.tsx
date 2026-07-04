@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import loveConfig from '@/config/loveConfig';
+import { uiText } from '@/config/uiText';
 import { getPath } from '@/utils/basePath';
 import styles from './ParallaxTimeline.module.css';
 
@@ -19,9 +20,9 @@ export default function ParallaxTimeline() {
   const photoItems: PhotoItem[] = Array.from({ length: loveConfig.photoCount }, (_, i) => ({
     src: getPath(`/photos/photo_${i + 1}.jpg`),
     milestone: loveConfig.milestones[i] || {
-      title: 'Beautiful Memory',
-      date: 'Our Journey',
-      description: 'Every moment with you is a treasure.'
+      title: uiText.timeline.fallbackMilestone.title,
+      date: uiText.timeline.fallbackMilestone.date,
+      description: uiText.timeline.fallbackMilestone.description
     },
     index: i
   }));
@@ -64,8 +65,8 @@ export default function ParallaxTimeline() {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2>Our Love Story</h2>
-          <p>Every moment, a chapter in our beautiful journey together</p>
+          <h2>{uiText.timeline.title}</h2>
+          <p>{uiText.timeline.subtitle}</p>
         </div>
 
         <div className={styles.timelineTrack}>
