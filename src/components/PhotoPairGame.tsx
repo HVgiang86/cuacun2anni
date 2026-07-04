@@ -3,27 +3,28 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { getPath } from "@/utils/basePath";
 
 // 18 images
 const imageList = [
-  "/game-photos/1.avif",
-  "/game-photos/2.avif",
-  "/game-photos/3.avif",
-  "/game-photos/4.avif",
-  "/game-photos/5.avif",
-  "/game-photos/6.avif",
-  "/game-photos/7.avif",
-  "/game-photos/8.avif",
-  "/game-photos/9.avif",
-  "/game-photos/10.avif",
-  "/game-photos/11.avif",
-  "/game-photos/12.avif",
-  "/game-photos/13.avif",
-  "/game-photos/14.avif",
-  "/game-photos/15.avif",
-  "/game-photos/16.avif",
-  "/game-photos/17.avif",
-  "/game-photos/18.avif",
+  getPath("/game-photos/1.avif"),
+  getPath("/game-photos/2.avif"),
+  getPath("/game-photos/3.avif"),
+  getPath("/game-photos/4.avif"),
+  getPath("/game-photos/5.avif"),
+  getPath("/game-photos/6.avif"),
+  getPath("/game-photos/7.avif"),
+  getPath("/game-photos/8.avif"),
+  getPath("/game-photos/9.avif"),
+  getPath("/game-photos/10.avif"),
+  getPath("/game-photos/11.avif"),
+  getPath("/game-photos/12.avif"),
+  getPath("/game-photos/13.avif"),
+  getPath("/game-photos/14.avif"),
+  getPath("/game-photos/15.avif"),
+  getPath("/game-photos/16.avif"),
+  getPath("/game-photos/17.avif"),
+  getPath("/game-photos/18.avif"),
 ];
 
 // Create 18 pairs of images (36 images in total)

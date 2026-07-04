@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import PhotoPairGame from "@/components/PhotoPairGame";
 import RewardCard from "@/components/RewardCard";
 import OrientationGuard from "@/components/OrientationGuard";
@@ -31,12 +32,12 @@ export default function ImageGamePage() {
     <OrientationGuard>
       <main className="flex items-center justify-center min-h-screen bg-black overflow-hidden relative">
         {/* Back to home link */}
-        <a
+        <Link
           href="/"
           className="fixed top-4 left-4 z-50 px-4 py-2 text-sm font-semibold text-white bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300"
         >
           ← Home
-        </a>
+        </Link>
 
         {!showReward ? (
           <motion.div

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import loveConfig from '@/config/loveConfig';
+import { getPath } from '@/utils/basePath';
 import styles from './ParallaxTimeline.module.css';
 
 interface PhotoItem {
@@ -16,7 +17,7 @@ export default function ParallaxTimeline() {
 
   // Generate photo items by pairing photos with milestones
   const photoItems: PhotoItem[] = Array.from({ length: loveConfig.photoCount }, (_, i) => ({
-    src: `/photos/photo_${i + 1}.jpg`,
+    src: getPath(`/photos/photo_${i + 1}.jpg`),
     milestone: loveConfig.milestones[i] || {
       title: 'Beautiful Memory',
       date: 'Our Journey',

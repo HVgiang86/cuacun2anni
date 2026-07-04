@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import styles from './RewardCard.module.css';
 
 interface RewardCardProps {
@@ -85,9 +86,9 @@ export default function RewardCard({ code, onPlayAgain, showBackLink = false }: 
             🎮 Play Again
           </button>
           {showBackLink && (
-            <a href="/" className={styles.backLink}>
+            <Link href="/" className={styles.backLink}>
               ← Back to Home
-            </a>
+            </Link>
           )}
         </div>
       </div>

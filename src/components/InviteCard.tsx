@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import loveConfig from '@/config/loveConfig';
+import { getPath } from '@/utils/basePath';
 import styles from './InviteCard.module.css';
 
 export default function InviteCard() {
@@ -125,7 +126,7 @@ END:VCALENDAR`;
         
         <div className={styles.catRoseContainer}>
           <Image 
-            src="/cat-rose.gif" 
+            src={getPath("/cat-rose.gif")} 
             alt="Cat with rose"
             width={200}
             height={200}
