@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import loveConfig from '@/config/loveConfig';
+import inviteConfig from '@/config/invite.json';
 import { getPath } from '@/utils/basePath';
 import styles from './InviteCard.module.css';
 
@@ -65,11 +66,11 @@ export default function InviteCard() {
 
   const handleAddToCalendar = () => {
     const event = {
-      title: `Valentine's Day with ${loveConfig.yourName}`,
+      title: `Anniversary with ${loveConfig.yourName}`,
       description: loveConfig.inviteMessage,
-      location: loveConfig.inviteLocation,
-      startDate: new Date(loveConfig.valentineDate + 'T19:00:00+08:00'),
-      endDate: new Date(loveConfig.valentineDate + 'T23:00:00+08:00'),
+      location: inviteConfig.location,
+      startDate: new Date(inviteConfig.rawDate + 'T20:00:00+08:00'),
+      endDate: new Date(inviteConfig.rawDate + 'T23:00:00+08:00'),
     };
 
     const formatDate = (date: Date) => {
@@ -78,9 +79,9 @@ export default function InviteCard() {
 
     const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Valentine's Day//EN
+PRODID:-//Anniversary//EN
 BEGIN:VEVENT
-UID:${Date.now()}@valentines2026
+UID:${Date.now()}@anniversary2026
 DTSTAMP:${formatDate(new Date())}
 DTSTART:${formatDate(event.startDate)}
 DTEND:${formatDate(event.endDate)}
@@ -92,7 +93,7 @@ SEQUENCE:0
 BEGIN:VALARM
 TRIGGER:-PT2H
 ACTION:DISPLAY
-DESCRIPTION:Reminder: Valentine's Date in 2 hours!
+DESCRIPTION:Reminder: Anniversary Dinner in 2 hours!
 END:VALARM
 END:VEVENT
 END:VCALENDAR`;
@@ -101,7 +102,7 @@ END:VCALENDAR`;
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'valentines-date-2026.ics';
+    link.download = 'anniversary-date-2026.ics';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -140,7 +141,7 @@ END:VCALENDAR`;
             <span className={styles.detailIcon}>📅</span>
             <div>
               <div className={styles.detailLabel}>Date</div>
-              <div className={styles.detailValue}>{loveConfig.inviteDate}</div>
+              <div className={styles.detailValue}>{inviteConfig.date}</div>
             </div>
           </div>
 
@@ -148,7 +149,7 @@ END:VCALENDAR`;
             <span className={styles.detailIcon}>🕐</span>
             <div>
               <div className={styles.detailLabel}>Time</div>
-              <div className={styles.detailValue}>{loveConfig.inviteTime}</div>
+              <div className={styles.detailValue}>{inviteConfig.time}</div>
             </div>
           </div>
 
@@ -156,7 +157,7 @@ END:VCALENDAR`;
             <span className={styles.detailIcon}>📍</span>
             <div>
               <div className={styles.detailLabel}>Location</div>
-              <div className={styles.detailValue}>{loveConfig.inviteLocation}</div>
+              <div className={styles.detailValue}>{inviteConfig.location}</div>
             </div>
           </div>
         </div>

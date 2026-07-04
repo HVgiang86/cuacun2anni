@@ -1,5 +1,5 @@
 // ============================================================================
-// Love Configuration - Personalize this file for your Valentine! 💕
+// Love Configuration - Personalize this file for your Anniversary! 💕
 // ============================================================================
 
 /**
@@ -30,11 +30,11 @@ export const loveConfig = {
   // Format: "YYYY-MM-DDTHH:MM:SS+08:00"
   relationshipStart: "2023-06-29T00:00:00+08:00",
   
-  // === VALENTINE'S DATE ===
-  valentineDate: "2026-02-14",
+  // === ANNIVERSARY DATE ===
+  anniversaryDate: "2026-07-05",
   
   // === HEADLINE AND INTRO ===
-  heroHeadline: "To My Dearest Valentine",
+  heroHeadline: "Happy 2nd Anniversary, My Love!",
   heroSubtext: "A journey through our moments together, celebrating every laugh, every adventure, and every heartbeat we've shared.",
   
   // === PHOTO GALLERY ===
@@ -82,7 +82,7 @@ export const loveConfig = {
     },
     {
       title: "This Moment",
-      date: "February 2026",
+      date: "July 2026",
       description: "Right now, as you read this, know that you are my greatest adventure and my safest home."
     }
   ],
@@ -90,15 +90,17 @@ export const loveConfig = {
   // === EMAIL CONFIGURATION ===
   // For the "Send me your answer" button
   yourEmail: "your.email@example.com", // Replace with your actual email
-  emailSubject: "My Valentine's Answer 💐",
-  emailBody: "Yes! I'd love to be your Valentine! 💕\n\nLove always,\n",
+  emailSubject: "Our Anniversary Celebration 🥂",
+  emailBody: "Yes! I'd love to celebrate our anniversary with you! 💕\n\nLove always,\n",
   
   // === INVITE DETAILS ===
-  inviteTitle: "Will You Be My Valentine?",
-  inviteMessage: "Join me for a magical evening on February 14th. Let's make more beautiful memories together.",
-  inviteDate: "February 14, 2026",
-  inviteTime: "7:00 PM",
-  inviteLocation: "A romantic surprise awaits...",
+  inviteTitle: "Will you celebrate our 2nd Anniversary with me?",
+  inviteMessage: "Join me for a magical evening to celebrate our 2 years together. Let's make more beautiful memories.",
+  // The date, time, and location will now be loaded from src/config/invite.json
+  // Keeping these for fallback purposes
+  inviteDate: "July 05, 2026",
+  inviteTime: "8:00 PM",
+  inviteLocation: "Let's Sushi Restaurant - No.2 Hàm Nghi, Mỹ Đình, Từ Liêm, HN",
 };
 
 export default loveConfig;
