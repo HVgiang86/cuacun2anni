@@ -26,9 +26,9 @@ export const loveConfig = {
   partnerName: "My Love",
   
   // === RELATIONSHIP START DATE ===
-  // Set this to when your relationship began (Singapore timezone: +08:00)
-  // Format: "YYYY-MM-DDTHH:MM:SS+08:00"
-  relationshipStart: "2023-06-29T00:00:00+08:00",
+  // Set this to when your relationship began
+  // Format: "YYYY-MM-DDTHH:MM:SS+07:00"
+  relationshipStart: "2024-07-07T00:00:00+07:00",
   
   // === ANNIVERSARY DATE ===
   anniversaryDate: "2026-07-05",
