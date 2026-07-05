@@ -38,6 +38,11 @@ export const loveConfig = {
   heroHeadline: "Chúc mừng kỷ niệm hai năm bên nhau!",
   heroSubtext: "Một hành trình đong đầy kỉ niệm vui, buồn, giận hờn, yêu thương. Cảm ơn bé yêu đã đến và ở bên anh, cảm ơn em vì tất cả!",
   
+  // === FINAL GIFT VIDEO ===
+  // Bạn có thể để link YouTube (VD: https://youtu.be/...) hoặc Google Drive ở đây.
+  // Nếu để trống, hệ thống sẽ tự động dùng file ở public/videos/final.mp4
+  finalVideoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+
   // === PHOTO GALLERY ===
   // How many photos are in /public/photos/ ?
   // Photos should be named: photo_1.jpg, photo_2.jpg, photo_3.jpg, etc.

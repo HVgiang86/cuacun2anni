@@ -12,4 +12,7 @@ export const rewardCodes = {
 
   /** 4-digit code revealed when Image Pairing game is completed */
   imagePairing: "1324",
+
+  /** 12-digit master code to unlock the final gift */
+  finalMasterCode: "073013240207",
 };

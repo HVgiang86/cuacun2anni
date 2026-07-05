@@ -92,6 +92,21 @@ export default function GameSection({ onOpenTulipGame }: GameSectionProps) {
           </div>
         </div>
 
+        {/* Final Gift Card */}
+        <div className={`${styles.finalGiftCard} ${visible ? styles.visible : ''}`}>
+          <div className={styles.cardGlow}></div>
+          <div className={styles.finalGiftContent}>
+            <div className={styles.finalGiftEmoji}>🎁</div>
+            <h3 className={styles.gameName}>{uiText.games.finalGiftCard.title}</h3>
+            <p className={styles.gameDescription}>
+              {uiText.games.finalGiftCard.description}
+            </p>
+            <Link href="/final-gift" className={`btn-primary ${styles.playButton} ${styles.finalGiftBtn}`}>
+              {uiText.games.finalGiftCard.button}
+            </Link>
+          </div>
+        </div>
+
         {/* Collection progress hint */}
         <div className={`${styles.progressHint} ${visible ? styles.visible : ''}`}>
           <span>🔑</span>

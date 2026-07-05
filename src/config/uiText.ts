@@ -36,6 +36,11 @@ export const uiText = {
       hint: "Ghép các cặp ảnh để nhận phần thưởng",
       footer: "🌷 Happy 2nd Anniversary 🌷"
     },
+    finalGiftCard: {
+      title: "Món Quà Đặc Biệt",
+      description: "Đã thu thập đủ 12 chữ số bí mật? Hãy mở khoá két sắt để nhận phần thưởng cuối cùng nhé!",
+      button: "🎁 Nhận món quà đặc biệt"
+    },
     tulipCatcher: {
       title: "Hứng Hoa Tulip 🌷",
       subtitle: (targetScore: number) => `Hứng đủ ${targetScore} bông hoa tulip đang rơi để mở khoá mật mã nhé!`,
@@ -79,5 +84,13 @@ export const uiText = {
     },
     calendarReminder: "Nhắc nhở: Sắp đến giờ kỷ niệm rồi!",
     yesAlert: "🎉 À huuúu... Ai mà có thể từ chối một Cún siêu cấp đáng yêu chớ hehehe💕"
+  },
+  finalGift: {
+    title: "Món Quà Cuối Cùng",
+    subtitle: "Hãy nhập đủ 12 chữ số bí mật mà bạn đã thu thập được để mở khoá phần thưởng cuối cùng nhé!",
+    placeholder: "0",
+    unlockButton: "🔓 Mở khoá",
+    errorMsg: "Mã sai mất tiêu rồi! Em thử kiểm tra lại xem nha 😢",
+    backToHome: "← Quay lại trang chủ"
   }
 };
