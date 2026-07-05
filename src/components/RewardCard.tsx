@@ -9,9 +9,10 @@ interface RewardCardProps {
   code: string;
   onPlayAgain: () => void;
   showBackLink?: boolean;
+  hintText: string;
 }
 
-export default function RewardCard({ code, onPlayAgain, showBackLink = false }: RewardCardProps) {
+export default function RewardCard({ code, onPlayAgain, showBackLink = false, hintText }: RewardCardProps) {
   const [revealed, setRevealed] = useState(false);
   const [confetti, setConfetti] = useState<Array<{ id: number; x: number; emoji: string; delay: number }>>([]);
 
@@ -77,7 +78,7 @@ export default function RewardCard({ code, onPlayAgain, showBackLink = false }: 
         <div className={styles.hintBox}>
           <span className={styles.hintIcon}>🔑</span>
           <p className={styles.hintText}>
-            {uiText.games.reward.hint}
+            {hintText}
           </p>
         </div>
 

@@ -67,6 +67,7 @@ export default function ImageGamePage() {
             <RewardCard
               code={rewardCodes.imagePairing}
               onPlayAgain={handlePlayAgain}
+              hintText={uiText.games.reward.hintImage}
               showBackLink={true}
             />
           </motion.div>

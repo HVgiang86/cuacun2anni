@@ -6,11 +6,11 @@ export const uiText = {
     title: "Em có biết...",
     subtitle: "Mỗi phút giây có em bên đời, mỗi khoảnh khắc đều là món quà vô giá",
     daysLabel: "ngày",
-    message: "...và sẽ còn đến mãi mãi, mãi mãi về sau 💕"
+    message: "...anh hy vọng, mình sẽ bên nhau đến mãi mãi, mãi mãi về sau 💕"
   },
   timeline: {
-    title: "Và anh sẽ kể lại cho em hành trình ấy...",
-    subtitle: "những khoảnh khắc tuyệt đẹp trong hành trình của của hai đứa",
+    title: "Anh sẽ kể lại cho em hành trình ấy...",
+    subtitle: "... hành trình đáng nhớ mà mình đã trải qua!",
     scrollPrompt: "Cuộn để khám phá hành trình của chúng ta",
     fallbackMilestone: {
       title: "Kỷ Niệm Đẹp",
@@ -22,7 +22,7 @@ export const uiText = {
     sectionTitle: "Trò chơi nho nhỏ cho em",
     subtitle: "Chơi những mini-game này để thu thập mật mã và mở khóa một bất ngờ đặc biệt nhé!",
     difficultyLabel: "Độ khó:",
-    progressHint: "Thu thập mật mã từ cả hai trò chơi để mở khóa phần thưởng cuối cùng!",
+    progressHint: "Thu thập đủ 12 chữ số bí mật để mở khóa phần thưởng cuối cùng!",
     tulipGame: {
       title: "Hứng Hoa Tulip",
       description: "Hãy hứng những bông hoa tulip đang rơi trước khi chúng biến mất! Thu thập đủ 10 bông để nhận mã bí mật đầu tiên.",
@@ -38,7 +38,7 @@ export const uiText = {
     },
     tulipCatcher: {
       title: "Hứng Hoa Tulip 🌷",
-      subtitle: (targetScore: number) => `Hứng đủ ${targetScore} bông hoa tulip đang rơi để nhận mã bí mật nhé!`,
+      subtitle: (targetScore: number) => `Hứng đủ ${targetScore} bông hoa tulip đang rơi để mở khoá mật mã nhé!`,
       howToPlay: "Cách Chơi",
       rule1: "🌷 Chạm vào những bông hoa tulip đang rơi để hứng",
       rule2: (targetScore: number) => `🎯 Hứng đủ ${targetScore} bông hoa để chiến thắng`,
@@ -57,9 +57,10 @@ export const uiText = {
     },
     reward: {
       title: "Chúc mừng!",
-      subtitle: "Bạn đã hoàn thành thử thách! Đây là phần thưởng của bạn:",
+      subtitle: "Em giỏi lắm! Đây là phần thưởng của bạn:",
       tapToReveal: "✨ Nhấn để mở ✨",
-      hint: "Hãy thu thập thêm 4 chữ số nữa để nhận món quà cuối cùng nhé!",
+      hintTulip: "Hãy thu thập đủ 12 chữ số để nhận món quà cuối cùng nhé!",
+      hintImage: "Vẫn còn 4 chữ số bí mật sẽ được bật mí sau nhé!",
       playAgain: "🎮 Chơi lại",
       backToHome: "← Quay lại trang chủ"
     }
@@ -71,12 +72,12 @@ export const uiText = {
       location: "Địa điểm"
     },
     buttons: {
-      yes: "Vâng! Em đồng ý! 💕",
+      yes: "Em đồng ý! 💕",
       no: "Không 😢",
       calendar: "📅 Thêm vào Lịch",
       sendAnswer: "💌 Gửi câu trả lời cho anh"
     },
     calendarReminder: "Nhắc nhở: Sắp đến giờ kỷ niệm rồi!",
-    yesAlert: "🎉 Yay! Anh biết là em sẽ đồng ý mà... Mong chờ đến ngày đó quá!! 💕"
+    yesAlert: "🎉 À huuúu... Ai mà có thể từ chối một Cún siêu cấp đáng yêu chớ hehehe💕"
   }
 };

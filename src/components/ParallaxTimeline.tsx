@@ -17,9 +17,9 @@ export default function ParallaxTimeline() {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Generate photo items by pairing photos with milestones
-  const photoItems: PhotoItem[] = Array.from({ length: loveConfig.photoCount }, (_, i) => ({
-    src: getPath(`/photos/photo_${i + 1}.jpg`),
-    milestone: loveConfig.milestones[i] || {
+  const photoItems: PhotoItem[] = loveConfig.milestones.map((milestone, i) => ({
+    src: milestone.image ? getPath(`/photos/${milestone.image}`) : getPath(`/photos/photo_${i + 1}.jpg`),
+    milestone: milestone || {
       title: uiText.timeline.fallbackMilestone.title,
       date: uiText.timeline.fallbackMilestone.date,
       description: uiText.timeline.fallbackMilestone.description

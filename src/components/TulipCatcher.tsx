@@ -147,6 +147,7 @@ export default function TulipCatcher({ isOpen, onClose }: TulipCatcherProps) {
           <RewardCard
             code={rewardCodes.tulipCatch}
             onPlayAgain={resetGame}
+            hintText={uiText.games.reward.hintTulip}
           />
         ) : (
           <div className={styles.gameWrapper}>
