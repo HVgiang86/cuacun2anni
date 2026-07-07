@@ -41,7 +41,7 @@ export const loveConfig = {
   // === FINAL GIFT VIDEO ===
   // Bạn có thể để link YouTube (VD: https://youtu.be/...) hoặc Google Drive ở đây.
   // Nếu để trống, hệ thống sẽ tự động dùng file ở public/videos/final.mp4
-  finalVideoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  finalVideoUrl: "https://www.youtube.com/watch?v=wcYlvUjiEmE",
 
   // === PHOTO GALLERY ===
   // How many photos are in /public/photos/ ?
